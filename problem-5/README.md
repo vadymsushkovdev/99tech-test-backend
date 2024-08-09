@@ -54,7 +54,6 @@ This document describes the API endpoints available through the `userRouter`. Th
 
 ```json
 {
-  "username": "string",
   "password": "string",
   "email": "string"
 }
@@ -85,9 +84,7 @@ This document describes the API endpoints available through the `userRouter`. Th
     "users": [
       {
         "id": "number",
-        "username": "string",
-        "email": "string",
-        ...
+        "email": "string"
       }
     ]
   }
@@ -111,9 +108,7 @@ This document describes the API endpoints available through the `userRouter`. Th
   {
     "user": {
       "id": "number",
-      "username": "string",
-      "email": "string",
-      ...
+      "username": "string"
     }
   }
   ```
@@ -128,7 +123,7 @@ This document describes the API endpoints available through the `userRouter`. Th
 
 ```json
 {
-  "userId": "number",
+  "id": "number",
   "oldPassword": "string",
   "newPassword": "string"
 }
