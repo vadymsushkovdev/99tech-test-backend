@@ -1,0 +1,21 @@
+version: '3.8'
+
+volumes:
+  99-tech-pgdata:
+
+services:
+  99-tech-postgres:
+    container_name: 99-tech-postgres
+    image: postgres:latest
+    restart: on-failure
+    env_file:
+      - '.env'
+    expose:
+      - '${POSTGRES_PORT}'
+    ports:
+      - '${POSTGRES_PORT}:${POSTGRES_PORT}'
+    environment:
+      PG_DATA: /var/lib/postgresql/data
+    volumes:
+      - 99-tech-pgdata:/var/lib/postgresql/data
+    command: '-p ${POSTGRES_PORT}'
