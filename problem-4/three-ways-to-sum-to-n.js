@@ -17,5 +17,5 @@ var sum_to_n_c = function(n) {
   return sum;
 };
 
-//Should return 5
+//Should return 15
 console.log({ a: sum_to_n_a(5), b: sum_to_n_b(5), c: sum_to_n_c(5) })
